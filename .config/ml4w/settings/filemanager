@@ -1,1 +1,2 @@
-nautilus --new-window
+#!/bin/bash
+thunar "$@"

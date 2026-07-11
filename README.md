@@ -1,4 +1,4 @@
-# 🌟 Gaurav's Dotfiles (ML4W-based Hyprland Setup)
+# Dotfiles (ML4W-based Hyprland Setup)
 
 Welcome to my personal dotfiles repository! This repository stores my customized desktop configurations, built on top of the **ML4W (My Linux for Work)** dotfiles suite. It provides a complete, modern, and highly aesthetic tiling window manager environment using Hyprland on Linux.
 
@@ -75,4 +75,10 @@ for dir in hypr kitty waybar wlogout swaync rofi fastfetch fish bashrc btop gtk-
         ln -sfn ~/.mydotfiles/com.ml4w.dotfiles/.config/$dir ~/.config/$dir
     fi
 done
+```
+---
+
+## Link to original Repo
+```
+https://github.com/mylinuxforwork/dotfiles
 ```

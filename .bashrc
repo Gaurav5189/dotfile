@@ -36,17 +36,4 @@ if [ -f ~/.bashrc_custom ]; then
     source ~/.bashrc_custom
 fi
 
-# Force the venv indicator onto the ML4W custom prompt line
-show_venv_prompt() {
-    if [ -n "$VIRTUAL_ENV" ]; then
-        # Extract just the parent name of the environment folder path
-        local venv_name=$(basename "$VIRTUAL_ENV")
-        # Prepend the indicator to whatever the active prompt string is
-        printf "(\e[1;34m%s\e[0m) " "$venv_name"
-    fi
-}
-
-# Inject the function directly into Bash's evaluation loop
-if [[ ! "$PROMPT_COMMAND" =~ show_venv_prompt ]]; then
-    export PROMPT_COMMAND="show_venv_prompt; $PROMPT_COMMAND"
-fi
+export VIRTUAL_ENV_DISABLE_PROMPT=1

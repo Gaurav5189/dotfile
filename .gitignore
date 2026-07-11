@@ -1,0 +1,6 @@
+# Ignore application and system caches
+**/.cache/
+**/cache/
+
+# Ignore system log files
+*.log

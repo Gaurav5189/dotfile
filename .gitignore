@@ -2,5 +2,28 @@
 **/.cache/
 **/cache/
 
-# Ignore system log files
+# logs
 *.log
+logs/
+*.log.*
+/var/log/
+# temp and cache
+*.tmp
+*.swap
+.cache/
+tmp/
+# system
+.DS_Store
+# env and secrets
+.env
+.env.local
+# ssh / keys
+id_rsa
+id_*.pub
+*.pem
+# editor
+.vscode/
+.idea/
+# node / python / etc
+node_modules/
+__pycache__/

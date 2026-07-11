@@ -64,12 +64,6 @@
             "background": "{{colors.secondary.default.hex}}",
             "type": "path",
             "style": "diamond"
-          },
-          {
-            "type": "text",
-            "style": "plain",
-            "foreground": "{{colors.primary.default.hex}}",
-            "template": "{[ if .Env.VIRTUAL_ENV ]} \ue235 ({[ base .Env.VIRTUAL_ENV ]}){[ end ]}"
           }
         ]
       },

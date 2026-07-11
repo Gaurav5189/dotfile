@@ -41,6 +41,16 @@ final_space = true
       commit_icon = '@'
       fetch_status = true
 
+   [[blocks.segments]]
+       type = 'python'
+       style = 'plain'
+       foreground = 'yellow'
+       background = 'transparent'
+       template = '  {{ if .Venv }}{{ .Venv }}{{ end }}'
+   
+       [blocks.segments.properties]
+         display_mode = 'environment'
+
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'

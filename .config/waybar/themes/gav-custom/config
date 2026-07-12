@@ -1,0 +1,57 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    // Load Modules
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],
+    // Modules Left
+    "modules-left": [
+        "custom/appmenu",
+        "hyprland/workspaces",
+        "group/quicklinks",
+        "custom/empty"
+    ],
+    // Modules Center
+    "modules-center": [],
+    // Modules Right    
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        "network",
+        "battery",
+        "disk",
+        "cpu",
+        "memory",
+        "memory#swap",
+        "group/tools",
+        "tray",
+        "custom/notification",
+        "custom/exit",
+        "custom/ml4w-welcome",
+        "clock"
+    ],
+    // Custom Standalone Overrides to format text and icons cleanly
+    "disk": {
+        "interval": 30,
+        "format": "   {percentage_used}%",
+        "path": "/"
+    },
+    "cpu": {
+        "format": "   {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "   {}%"
+    },
+    "memory#swap": {
+        "format": " swap   {swapPercentage}%",
+        "tooltip-format": "Swap used: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
+    }
+}

@@ -53,7 +53,7 @@ window#waybar {
     background: @workspacesbackground1;
     margin: 2px 1px 3px 1px;
     padding: 0px 1px;
-    border-radius: 15px;
+    border-radius: 25px;
     border: 0px;
     font-weight: bold;
     font-style: normal;
@@ -64,7 +64,7 @@ window#waybar {
 
 #workspaces button {
     padding: 0px 5px;
-    margin: 4px 3px;
+    margin: 9px 3px;
     border-radius: 15px;
     border: 0px;
     color: @textcolor2;
@@ -533,4 +533,94 @@ window#waybar.empty #window {
     border-radius: 15px;
     margin: 5px 4px 5px 0px;
     opacity: 0.8;
+}
+
+/* Taskbar Capsules */
+#taskbar.custom {
+    background-color: @backgroundlight;
+    margin: 5px 10px 5px 5px;
+    padding: 0px 8px;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+#taskbar.custom button {
+    padding: 0px 6px;
+    margin: 3px 0px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#taskbar.custom button.active {
+    background-color: @workspacesbackground2;
+}
+
+#taskbar.custom button:hover {
+    background-color: @secondary;
+}
+
+/* -----------------------------------------------------
+ * Global Black Glassmorphic Capsules Override
+ * ----------------------------------------------------- */
+window#waybar #custom-appmenu,
+window#waybar #workspaces,
+window#waybar #taskbar.custom,
+window#waybar #custom-updates,
+window#waybar #pulseaudio,
+window#waybar #network,
+window#waybar #battery,
+window#waybar #disk.custom,
+window#waybar #cpu.custom,
+window#waybar #memory.custom,
+window#waybar #clock {
+    background-color: rgba(0, 0, 0, 0.45);
+    background-image: none; /* Safely clears out default background gradients */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+}
+
+/* Maintain exact slim profiles and custom text colors */
+window#waybar #disk.custom {
+    color: #8be9fd;
+    font-size: 16px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 5px 5px 0px;
+}
+
+window#waybar #cpu.custom {
+    color: #ff5555;
+    font-size: 16px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 5px 5px 0px;
+}
+
+window#waybar #memory.custom {
+    font-size: 16px;
+    padding: 2px 12px 0px 12px;
+    margin: 5px 5px 5px 0px;
+    color: @textcolor1;
+}
+
+/* Taskbar Internal Button Adjustments */
+window#waybar #taskbar.custom {
+    margin: 5px 10px 5px 5px;
+    padding: 0px 6px;
+}
+
+window#waybar #taskbar.custom button {
+    padding: 2px 6px 0px 6px;
+    margin: 0px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+window#waybar #taskbar.custom button.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    background-image: none;
+}
+
+window#waybar #taskbar.custom button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    background-image: none;
 }

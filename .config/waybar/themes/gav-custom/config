@@ -1,35 +1,30 @@
 {
-    // General Settings
     "layer": "top",
     "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
     "spacing": 0,
-    // Load Modules
     "include": [
         "~/.config/ml4w/settings/waybar-quicklinks.json",
         "~/.config/waybar/modules.json"
     ],
-    // Modules Left
     "modules-left": [
         "custom/appmenu",
         "hyprland/workspaces",
         "group/quicklinks",
+        "wlr/taskbar#custom",
         "custom/empty"
     ],
-    // Modules Center
     "modules-center": [],
-    // Modules Right    
     "modules-right": [
         "custom/updates",
         "pulseaudio",
         "network",
         "battery",
-        "disk",
-        "cpu",
-        "memory",
-        "memory#swap",
+        "disk#custom",
+        "cpu#custom",
+        "memory#custom",
         "group/tools",
         "tray",
         "custom/notification",
@@ -37,21 +32,26 @@
         "custom/ml4w-welcome",
         "clock"
     ],
-    // Custom Standalone Overrides to format text and icons cleanly
-    "disk": {
+    "wlr/taskbar#custom": {
+        "format": "{icon}",
+        "icon-size": 22,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "all-outputs": true,
+        "ignore-list": ["Waybar"]
+    },
+    "disk#custom": {
         "interval": 30,
         "format": "   {percentage_used}%",
         "path": "/"
     },
-    "cpu": {
+    "cpu#custom": {
         "format": "   {usage}%",
         "tooltip": false
     },
-    "memory": {
-        "format": "   {}%"
-    },
-    "memory#swap": {
-        "format": " swap   {swapPercentage}%",
-        "tooltip-format": "Swap used: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
+    "memory#custom": {
+        "format": "<span color='#50fa7b'>   {percentage}%</span>  |  <span color='#ffb86c'>swap   {swapPercentage}%</span>"
     }
 }

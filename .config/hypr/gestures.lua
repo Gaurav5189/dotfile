@@ -2,20 +2,15 @@
 -- Gestures
 -------------------------------------------------------
 
--- Workspaces
-hl.gesture({
-    fingers = 3,
-    direction = "vertical",
-    action = "workspace"
-})
-
--- Scrolling
+-- 3-Finger Horizontal Swipe to Switch Workspaces
 hl.gesture({
     fingers = 3,
     direction = "horizontal",
-    action = "scroll_move",
-    scale = 0.9,
+    action = "workspace"
 })
+
+-- NOTE: The "vertical" workspace rule and "scroll_move" rule 
+-- have been removed to prevent gesture shadowing.
 
 -- Fullscreen on  
 hl.gesture({ fingers = 4, direction = "pinchout", action = function ()

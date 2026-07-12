@@ -45,3 +45,23 @@ end
 
 -- HYPRMOD
 require("hyprland-gui")
+
+-- =============================================================================
+-- CUSTOM GESTURES 
+-- =============================================================================
+-- Note: 3-finger horizontal workspace switching is already handled by default(~/.config/hypr/gestures.lua).
+
+-- 4-Finger Swipe Up to go Fullscreen
+hl.gesture({ fingers = 4, direction = "up", action = "fullscreen" })
+
+-- 4-Finger Swipe Down to toggle the ML4W Sidebar
+hl.gesture({ 
+    fingers = 4, 
+    direction = "down", 
+    action = function() 
+        hl.exec_cmd("qs ipc call sidebar toggle") 
+    end 
+})
+
+-- Special Scratchpad Toggle
+hl.gesture({ fingers = 4, direction = "vertical", action = "special" })

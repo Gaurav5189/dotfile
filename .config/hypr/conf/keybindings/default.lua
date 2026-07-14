@@ -8,6 +8,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/filemanager"
 hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/emojipicker.sh"), { description = "Open the emoji picker" })
 hl.bind(mainMod .. " + CTRL + C", hl.dsp.exec_cmd("~/.config/ml4w/settings/calculator.sh"), { description = "Open the calculator" })
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/gav/.local/share/antigravity/antigravity-ide"), { description = "Open Antigravity IDE" })
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("notesnook"), { description = "Open Notesnook Notes" })
 
 -- fr keyboard layout setup
 local is_fr = false

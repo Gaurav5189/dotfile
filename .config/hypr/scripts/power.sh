@@ -35,7 +35,6 @@ terminate_clients() {
         echo ":: PID $pid has terminated."
     done
     
-    # Corrected lowercase $home to uppercase $HOME
     bash $HOME/.config/ml4w/listeners.sh --stopall
 }
 

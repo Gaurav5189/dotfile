@@ -6,3 +6,7 @@ hl.window_rule({
     size = "1000 650",
     max_size = { 1000, 650 }
 })
+
+-- Quickshell Sidebar Blur
+hl.layer_rule({ match = { namespace = "quickshell:sidebar" }, blur = true })
+

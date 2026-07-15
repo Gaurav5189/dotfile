@@ -16,7 +16,7 @@ You can reload waybar with SUPER + SHIFT + B
     },
     "custom/quicklink_antigravity": {
         "format": "",
-        "on-click": "/home/gav/.local/share/antigravity/antigravity-ide",
+        "on-click": "/home/gav/.local/share/antigravity/antigravity-ide --ozone-platform=x11",
         "tooltip-format": "Open Google Antigravity IDE"
     },
     "custom/quicklink_chromium": {

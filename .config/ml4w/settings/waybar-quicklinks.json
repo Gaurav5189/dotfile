@@ -66,7 +66,7 @@ Add your quicklinks in your desired order to the status bar
         "orientation": "horizontal",
         "modules": [
             "custom/quicklink_browser",
-            "custom/quicklink_chrome",
+            "custom/quicklink_chromium",
             "custom/quicklink_filemanager",
             "custom/quicklink_antigravity",
 /*

@@ -14,6 +14,11 @@ PanelWindow {
     // --- WAYLAND CONFIGURATION ---
     WlrLayershell.layer: WlrLayer.Overlay
     exclusionMode: WlrLayershell.Ignore
+    WlrLayershell.namespace: "quickshell:calendar"
+
+    surfaceFormat {
+        opaque: false
+    }
     
     implicitWidth: 380
     implicitHeight: 380 
@@ -247,21 +252,20 @@ PanelWindow {
             id: mainBgRect
             anchors.fill: parent
             radius: 10
-            opacity: 0.95 // Only the background is transparent
 
-            // Gradient border (outer)
+            // Gradient border (outer) - subtle, translucent frosted-white edge
             gradient: Gradient {
                 orientation: Gradient.Vertical
-                GradientStop { position: 0.0; color: Theme.primary }
-                GradientStop { position: 1.0; color: Theme.on_primary }
+                GradientStop { position: 0.0; color: Qt.rgba(1.0, 1.0, 1.0, 0.22) }
+                GradientStop { position: 1.0; color: Qt.rgba(1.0, 1.0, 1.0, 0.07) }
             }
 
-            // Background fill (inner), inset by the border thickness
+            // Background fill (inner) - semi-transparent dark grey for frosted glass look
             Rectangle {
                 anchors.fill: parent
                 anchors.margins: 2
                 radius: parent.radius - anchors.margins
-                color: Theme.background
+                color: Qt.rgba(0.08, 0.08, 0.08, 0.4)
             }
         }
 

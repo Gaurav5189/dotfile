@@ -7,6 +7,6 @@ hl.window_rule({
     max_size = { 1000, 650 }
 })
 
--- Quickshell Sidebar Blur
-hl.layer_rule({ match = { namespace = "quickshell:sidebar" }, blur = true })
+-- Quickshell Windows Blur
+hl.layer_rule({ match = { namespace = "quickshell:.*" }, blur = true, ignore_alpha = 0.2 })
 

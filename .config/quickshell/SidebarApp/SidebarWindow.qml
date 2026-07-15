@@ -17,6 +17,10 @@ PanelWindow {
     exclusionMode: WlrLayershell.Ignore
     WlrLayershell.namespace: "quickshell:sidebar"
 
+    surfaceFormat {
+        opaque: false
+    }
+
     implicitWidth: 420 // 380 + 40
     color: "transparent"
 
@@ -239,7 +243,7 @@ PanelWindow {
                 anchors.fill: parent
                 anchors.margins: 2
                 radius: parent.radius - anchors.margins
-                color: Qt.rgba(0.08, 0.08, 0.08, 0.65)
+                color: Qt.rgba(0.08, 0.08, 0.08, 0.4)
             }
         }
 

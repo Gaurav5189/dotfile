@@ -50,7 +50,7 @@ export GRIMBLAST_EDITOR="$(cat ~/.config/ml4w/settings/screenshot-editor)"
 # Quick instant mode: full screen
 take_instant_full() {
     mkdir -p "$screenshot_folder"
-    grim -t "$image_format" - | satty --filename - --output-filename "$screenshot_folder/$NAME"
+    grim -t png - | satty --filename - --output-filename "$screenshot_folder/${NAME%.*}.png"
 }
 
 # Quick instant mode: area selection
@@ -73,7 +73,7 @@ take_instant_area() {
 
     # capture and open in satty
     mkdir -p "$screenshot_folder"
-    grim -g "$region" -t "$image_format" - | satty --filename - --output-filename "$screenshot_folder/$NAME"
+    grim -g "$region" -t png - | satty --filename - --output-filename "$screenshot_folder/${NAME%.*}.png"
 }
 
 # Handle instant flags

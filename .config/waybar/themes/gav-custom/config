@@ -18,7 +18,6 @@
     ],
     "modules-center": [],
     "modules-right": [
-        "custom/updates",
         "pulseaudio",
         "network",
         "battery",

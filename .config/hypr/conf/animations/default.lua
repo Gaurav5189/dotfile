@@ -33,10 +33,10 @@ hl.curve("md2", { type = "bezier", points = { {0.4, 0}, {0.2, 1} } }) -- use wit
 --------------------------------------------------------------------------------
 -- Animation Rules
 --------------------------------------------------------------------------------
-hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "md3_decel", style = "popin 60%" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "md3_decel", style = "popin 60%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "md3_accel", style = "popin 60%" })
-hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "default" })
+hl.animation({ leaf = "windows", enabled = true, speed = 4, bezier = "md3_decel", style = "popin 60%" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4, bezier = "md3_decel", style = "popin 60%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 4, bezier = "md3_accel", style = "popin 60%" })
+hl.animation({ leaf = "border", enabled = false, speed = 10, bezier = "default" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "md3_decel" })
 
 -- Commmented out alternatives from your legacy configuration:
@@ -46,7 +46,7 @@ hl.animation({ leaf = "layersIn", enabled = true, speed = 3, bezier = "menu_dece
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.6, bezier = "menu_accel" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 2, bezier = "menu_decel" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 4.5, bezier = "menu_accel" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 7, bezier = "menu_decel", style = "slide" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 9, bezier = "menu_decel", style = "slide" })
 
 -- Commmented out alternatives from your legacy configuration:
 -- hl.animation({ leaf = "workspaces", enabled = true, speed = 2.5, bezier = "softAcDecel", style = "slide" })

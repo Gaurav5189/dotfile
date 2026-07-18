@@ -25,7 +25,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 0px solid #ffffff;
     /* color: #FFFFFF; */
     background: transparent;
@@ -34,15 +34,15 @@ window#waybar {
 }
 
 .modules-left {
-    margin:8px 0px 8px 10px;
+    margin: 8px 0px 8px 10px;
 }
 
 .modules-right {
-    margin:8px 10px 8px 0px;
+    margin: 8px 10px 8px 0px;
 }
 
 .modules-center {
-    margin:8px 0px 8px 0px;
+    margin: 8px 0px 8px 0px;
 }
 
 /* -----------------------------------------------------
@@ -93,8 +93,8 @@ window#waybar {
 tooltip {
     border-radius: 16px;
     background-color: @backgroundlight;
-    padding:20px;
-    margin:0px;
+    padding: 20px;
+    margin: 0px;
 }
 
 tooltip label {
@@ -110,14 +110,14 @@ tooltip label {
     margin: 5px 15px 5px 0px;
     padding: 2px 10px 0px 10px;
     border-radius: 12px;
-    color:@textcolor1;
-    font-size:16px;
-    font-weight:normal;
-    opacity:0.8;
+    color: @textcolor1;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.8;
 }
 
 window#waybar.empty #window {
-    background-color:transparent;
+    background-color: transparent;
 }
 
 /* -----------------------------------------------------
@@ -127,36 +127,36 @@ window#waybar.empty #window {
 #taskbar {
     background: @backgroundlight;
     margin: 3px 15px 3px 0px;
-    padding:0px;
+    padding: 0px;
     border-radius: 15px;
     font-weight: normal;
     font-style: normal;
-    opacity:0.8;
+    opacity: 0.8;
     border: 3px solid @backgroundlight;
 }
 
 #taskbar button {
-    margin:0;
+    margin: 0;
     border-radius: 15px;
     padding: 0px 5px 0px 5px;
 }
 
 #taskbar.empty {
-    background:transparent;
-    border:0;
-    padding:0;
-    margin:0;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* -----------------------------------------------------
  * Modules
  * ----------------------------------------------------- */
 
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -185,6 +185,7 @@ window#waybar.empty #window {
 #custom-quicklink_firefox,
 #custom-quicklink_browser,
 #custom-quicklink_filemanager,
+#custom-quicklink_antigravity,
 #custom-quicklink_email,
 #custom-quicklink_thunderbird,
 #custom-quicklink_calculator,
@@ -203,8 +204,8 @@ window#waybar.empty #window {
     margin-left: 4px;
     font-size: 20px;
     font-weight: bold;
-    opacity: 0.8;
-    color: @iconcolor;
+    opacity: 0.95;
+    color: #baccca;
 }
 
 #custom-quicklink_chromium,
@@ -212,6 +213,7 @@ window#waybar.empty #window {
 #custom-quicklink_firefox,
 #custom-quicklink_browser,
 #custom-quicklink_filemanager,
+#custom-quicklink_antigravity,
 #custom-quicklink_email,
 #custom-quicklink_thunderbird,
 #custom-quicklink_calculator,
@@ -230,7 +232,7 @@ window#waybar.empty #window {
 }
 
 #custom-tools {
-    margin-right:12px;
+    margin-right: 12px;
 }
 
 #custom-hypridle.active {
@@ -291,18 +293,18 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 0px 10px 0px 10px;
     margin: 3px 10px 3px 0px;
-    opacity:0.8;
-    border:3px solid @bordercolor;
+    opacity: 0.8;
+    border: 3px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
  * Custom Notification
  * ----------------------------------------------------- */
 
- #custom-notification {
+#custom-notification {
     margin: 0px 13px 0px 0px;
-    padding:0px;
-    font-size:24px;
+    padding: 0px;
+    font-size: 24px;
     font-family: "Material Icons";
     color: @iconcolor;
     opacity: 0.8;
@@ -314,8 +316,8 @@ window#waybar.empty #window {
 
 #custom-exit {
     margin: 0px 13px 0px 0px;
-    padding:0px;
-    font-size:20px;
+    padding: 0px;
+    font-size: 20px;
     color: @iconcolor;
     opacity: 0.8;
 }
@@ -331,7 +333,7 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 5px 5px 5px 0px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 #custom-updates.green {
@@ -352,27 +354,30 @@ window#waybar.empty #window {
  * Hardware Group
  * ----------------------------------------------------- */
 
-#disk,#memory,#cpu,#language {
-    margin:0px;
-    padding:0px;
-    font-size:16px;
-    color:@iconcolor;
+#disk,
+#memory,
+#cpu,
+#language {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: @iconcolor;
 }
 
 #language {
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 /* -----------------------------------------------------
  * Power Profiles Daemon & custom auto-cpufreq
  * ----------------------------------------------------- */
 
- #power-profiles-daemon,
- #custom-power-profile {
+#power-profiles-daemon,
+#custom-power-profile {
     margin: 0px 13px 0px 0px;
-    padding:0px;
-    font-size:16px;
-    color:@iconcolor;
+    padding: 0px;
+    font-size: 16px;
+    color: @iconcolor;
 }
 
 /* -----------------------------------------------------
@@ -386,8 +391,8 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 1px 10px 0px 10px;
     margin: 3px 0px 3px 0px;
-    opacity:0.8;
-    border:3px solid @bordercolor;
+    opacity: 0.8;
+    border: 3px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
@@ -401,7 +406,7 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 5px 15px 5px 0px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 /* -----------------------------------------------------
@@ -415,7 +420,7 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 5px 5px 5px 0px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 #pulseaudio.muted {
@@ -434,7 +439,7 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 10px 0px 10px;
     margin: 5px 5px 5px 0px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
 #network.ethernet {
@@ -458,10 +463,11 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 5px 0px 5px;
     margin: 5px 5px 5px 0px;
-    opacity:0.8;
+    opacity: 0.8;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: @textcolor1;
     background-color: @backgroundlight;
 }
@@ -491,17 +497,18 @@ window#waybar.empty #window {
     padding: 0px 15px 0px 0px;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
 }
 
 /* Persistent Hardware Visual Accents */
 #disk {
-    color: #f1fa8c; /* Vivid Yellow */
+    color: #f1fa8c;
+    /* Vivid Yellow */
     background-color: @backgroundlight;
     padding: 2px 12px 0px 10px;
     border-radius: 15px;
@@ -510,7 +517,8 @@ window#waybar.empty #window {
 }
 
 #cpu {
-    color: #ff5555; /* Vivid Red */
+    color: #ff5555;
+    /* Vivid Red */
     background-color: @backgroundlight;
     padding: 2px 12px 0px 10px;
     border-radius: 15px;
@@ -519,7 +527,8 @@ window#waybar.empty #window {
 }
 
 #memory {
-    color: #50fa7b; /* Vivid Green */
+    color: #50fa7b;
+    /* Vivid Green */
     background-color: @backgroundlight;
     padding: 2px 12px 0px 10px;
     border-radius: 15px;
@@ -528,7 +537,8 @@ window#waybar.empty #window {
 }
 
 #memory.swap {
-    color: #ffb86c; /* Vivid Orange */
+    color: #ffb86c;
+    /* Vivid Orange */
     background-color: @backgroundlight;
     padding: 2px 12px 0px 10px;
     border-radius: 15px;
@@ -575,7 +585,8 @@ window#waybar #cpu.custom,
 window#waybar #memory.custom,
 window#waybar #clock {
     background-color: rgba(0, 0, 0, 0.45);
-    background-image: none; /* Safely clears out default background gradients */
+    background-image: none;
+    /* Safely clears out default background gradients */
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 25px;
 }

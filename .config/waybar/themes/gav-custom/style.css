@@ -636,3 +636,17 @@ window#waybar #taskbar.custom button:hover {
     background-color: rgba(255, 255, 255, 0.25);
     background-image: none;
 }
+
+/* Universal Bright White & Opacity for Tool Icons */
+window#waybar #custom-tools,
+window#waybar #custom-cliphist,
+window#waybar #custom-hypridle,
+window#waybar #custom-hyprshade,
+window#waybar #custom-power-profile,
+window#waybar #custom-exit,
+window#waybar #custom-notification,
+window#waybar #custom-ml4w-welcome,
+window#waybar #idle_inhibitor {
+    color: #7e7e7e;
+    opacity: 0.95;
+}

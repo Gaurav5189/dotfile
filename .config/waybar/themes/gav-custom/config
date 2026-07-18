@@ -47,10 +47,12 @@
         "path": "/"
     },
     "cpu#custom": {
+        "interval": 2,
         "format": "   {usage}%",
         "tooltip": false
     },
     "memory#custom": {
+        "interval": 2,
         "format": "<span color='#50fa7b'>   {percentage}%</span>  |  <span color='#ffb86c'>swap   {swapPercentage}%</span>"
     }
 }

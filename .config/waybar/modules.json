@@ -164,6 +164,13 @@
     "on-click": "qs ipc call power toggle",
     "tooltip-format": "Open Power Menu"
   },
+  // auto-cpufreq Power Profile
+  "custom/power-profile": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/auto-cpufreq.sh",
+    "interval": 2,
+    "on-click": "kitty --class dotfiles-floating -e sudo auto-cpufreq --stats"
+  },
   // SwayNC
   "custom/notification": {
     "tooltip-format": "Left: Notifications\nRight: Do not disturb",
@@ -238,6 +245,7 @@
   },
   // CPU
   "cpu": {
+    "interval": 2,
     "format": "/ C {usage}% ",
     "on-click": "~/.config/ml4w/settings/system-monitor.sh",
     "on-scroll-up": "true",
@@ -245,6 +253,7 @@
   },
  // Memory
   "memory": {
+    "interval": 2,
     "format": "/ M {percentage}% / S {swapPercentage}% ",
     "on-click": "~/.config/ml4w/settings/system-monitor.sh",
     "on-scroll-up": "true",
@@ -293,7 +302,7 @@
       "custom/cliphist",
       "custom/hypridle",
       "custom/hyprshade",
-      "power-profiles-daemon"
+      "custom/power-profile"
     ]
   },
   // Group Links

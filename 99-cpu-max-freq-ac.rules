@@ -1,0 +1,1 @@
+SUBSYSTEM=="power_supply", KERNEL=="ADP0", ACTION=="change", ATTR{online}=="1", RUN+="/usr/local/bin/reset-cpu-max-freq.sh"

@@ -64,7 +64,7 @@
         "bluetooth",
         "network",
         "battery",
-        "power-profiles-daemon",
+        "custom/power-profile",
         "group/hardware",
         "group/tools",
         "custom/exit",

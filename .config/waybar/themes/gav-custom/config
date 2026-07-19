@@ -19,7 +19,6 @@
     "modules-center": [],
     "modules-right": [
         "pulseaudio",
-        "network",
         "battery",
         "disk#custom",
         "cpu#custom",
@@ -39,7 +38,9 @@
         "on-click": "activate",
         "on-click-middle": "close",
         "all-outputs": true,
-        "ignore-list": ["Waybar"]
+        "ignore-list": [
+            "Waybar"
+        ]
     },
     "disk#custom": {
         "interval": 30,

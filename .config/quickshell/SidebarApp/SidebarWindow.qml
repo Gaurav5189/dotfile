@@ -672,7 +672,7 @@ PanelWindow {
                                     onClicked: (mouse) => {
                                         if (mouse.button === Qt.LeftButton) {
                                             wifiBtn.isActive = !wifiBtn.isActive
-                                            Quickshell.execDetached(["bash", "-c", "nmcli radio wifi toggle"])
+                                            Quickshell.execDetached(["bash", "-c", "nmcli radio wifi | grep -q 'enabled' && nmcli radio wifi off || nmcli radio wifi on"])
                                         } else if (mouse.button === Qt.RightButton) {
                                             root.isOpen = false
                                             Quickshell.execDetached(["bash", "-c", Quickshell.env("HOME") + "/.config/ml4w/settings/networkmanager.sh"])
@@ -721,7 +721,7 @@ PanelWindow {
                                     onClicked: (mouse) => {
                                         if (mouse.button === Qt.LeftButton) {
                                             btBtn.isActive = !btBtn.isActive
-                                            Quickshell.execDetached(["bash", "-c", "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"])
+                                            Quickshell.execDetached(["bash", "-c", "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || (rfkill unblock bluetooth; sleep 0.1; bluetoothctl power on)"])
                                         } else if (mouse.button === Qt.RightButton) {
                                             root.isOpen = false
                                             Quickshell.execDetached(["blueman-manager"])

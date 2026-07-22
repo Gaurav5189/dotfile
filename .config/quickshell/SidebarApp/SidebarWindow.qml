@@ -773,6 +773,39 @@ PanelWindow {
                                     }
                                 }
                             }
+
+                            // DISPLAY MANAGER
+                            Item {
+                                id: displayBtn
+                                Layout.fillWidth: true
+                                implicitHeight: 56
+                                Rectangle {
+                                    id: displayBg
+                                    anchors.centerIn: parent
+                                    width: 52
+                                    height: 52
+                                    radius: width / 2
+                                    color: "transparent"
+
+                                    Text {
+                                        anchors.centerIn: parent
+                                        text: "󰍹"
+                                        font.family: "monospace"
+                                        font.pixelSize: 22
+                                        color: Theme.primary
+                                        horizontalAlignment: Text.AlignHCenter
+                                        verticalAlignment: Text.AlignVCenter
+                                    }
+                                }
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: {
+                                        root.isOpen = false
+                                        Quickshell.execDetached(["nwg-displays"])
+                                    }
+                                }
+                            }
                         }
                     }
 
